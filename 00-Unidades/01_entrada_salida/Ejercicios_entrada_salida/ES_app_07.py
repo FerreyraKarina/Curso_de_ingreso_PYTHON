@@ -49,48 +49,60 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-         op_a = self.txt_operador_a.get()
-         op_b = self.txt_operador_b.get()
+         operador_a = self.txt_operador_a.get()
+         operador_b = self.txt_operador_b.get()
          
-         op_a_int = int(op_a)
-         op_b_int = int(op_b)
+         operador_a_float = float(operador_a)
+         operador_b_float = float(operador_b)
 
-         suma = op_a_int + op_b_int
+         suma = operador_a_float + operador_b_float
 
-         alert("Ressultado",f"El resultado de la suma es : {suma}")
+
+         mensaje = f"El resultado de la suma es : {suma}"
+
+         alert("Resultado",mensaje)
 
     def btn_restar_on_click(self):
-         op_a = self.txt_operador_a.get()
-         op_b = self.txt_operador_b.get()
+         operador_a= self.txt_operador_a.get()
+         operador_b = self.txt_operador_b.get()
+         
+         operador_a_float = float(operador_a)
+         operador_b_float = float(operador_b)
 
-         op_a_int = int(op_a)
-         op_b_int = int(op_b)
+         resta = operador_a_float - operador_b_float
 
-         resta = op_a_int - op_b_int
 
-         alert("Resta",f"El resultado de la resta es : {resta} ")
+         mensaje = f"El resultado de la resta es : {resta}"
+
+         alert("Resultado", mensaje)
 
     def btn_multiplicar_on_click(self):
-          op_a = self.txt_operador_a.get()
-          op_b = self.txt_operador_b.get()
+         operador_a = self.txt_operador_a.get()
+         operador_b = self.txt_operador_b.get()
+         
+         operador_a_float = float(operador_a)
+         operador_b_float = float(operador_b)
 
-          op_a_int = int(op_a)
-          op_b_int = int(op_b)
+         multiplicación= operador_a_float * operador_b_float
 
-          multiplicacion = op_a_int * op_b_int
 
-          alert("Multiplicación",f"El resultado de la multiplicación es : {multiplicacion} ")
+         mensaje = f"El resultado de la multiplicación es : {multiplicación}"
+
+         alert("Resultado",mensaje)
 
     def btn_dividir_on_click(self):
-        op_a = self.txt_operador_a.get()
-        op_b = self.txt_operador_b.get()
+         operador_a = self.txt_operador_a.get()
+         operador_b = self.txt_operador_b.get()
+         
+         operador_a_float = float(operador_a)
+         operador_b_float = float(operador_b)
 
-        op_a_int = int(op_a)
-        op_b_int = int(op_b)
+         división = operador_a_float / operador_b_float
 
-        division= op_a_int / op_b_int
 
-        alert("División",f"El resultado de la división es : {division} ")
+         mensaje = f"El resultado de la división es : {división}"
+
+         alert("Resultado",mensaje)
         
         
 if __name__ == "__main__":
